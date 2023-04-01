@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from home.views import *
 
 urlpatterns = [
+    path('canhevote',CanVote,name="canhevote"),
+    path('',home,name="home"),
+    path('html_page',html_page,name="html_page"),
     path('admin/', admin.site.urls),
 ]
