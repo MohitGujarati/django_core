@@ -36,11 +36,11 @@
       <td>{{i.background}}</td>
       <td>{{i.age}}</td>
       <td>
-        {% if age >= 18 %}
-           vote up
-        {% else %}
-           vote down
-        {% endif %}
+        {% if i.age >= 18 %}
+    <p>The condition is true.</p>
+       {% else %}
+    <p>The condition is false.</p>
+       {% endif %}
       </td>
       
     </tr>

@@ -18,7 +18,7 @@ def CanVote(request):
         {'name':'Mohit','background':'Computer Eng','age':'21'},
         {'name':'Mohit','background':'Computer Eng','age':'16'},
         {'name':'Mohit','background':'Computer Eng','age':'29'},
-        {'name':'Mohit','background':'Computer Eng','age':'17'}
+        {'name':'Mohit','background':'Computer Eng','age':'18'}
     ]
     
     return render (request,"canvote.html",context={'peoples':peoples})
