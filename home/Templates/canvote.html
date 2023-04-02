@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Can You Vote</title>
+    
     <style>
       table, th, td {
   border: 1px solid black;
@@ -35,11 +36,13 @@
       <td>{{i.name}}</td>
       <td>{{i.background}}</td>
       <td>{{i.age}}</td>
-      <td>
-        {% if i.age >= 18 %}
-    <p>The condition is true.</p>
+      <td {% if i.age <= 18 %} style="background:red" {% endif %}>
+       
+        {% if i.age > 18 %}
+        
+       <p>👍</p>
        {% else %}
-    <p>The condition is false.</p>
+       <p>👎</p>
        {% endif %}
       </td>
       

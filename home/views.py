@@ -15,10 +15,10 @@ def html_page(request):
 def CanVote(request):
     
     peoples = [
-        {'name':'Mohit','background':'Computer Eng','age':'21'},
-        {'name':'Mohit','background':'Computer Eng','age':'16'},
-        {'name':'Mohit','background':'Computer Eng','age':'29'},
-        {'name':'Mohit','background':'Computer Eng','age':'18'}
+        {'name':'Mohit','background':'Computer Eng','age':24},
+        {'name':'Kunal','background':'Computer Eng','age':17},
+        {'name':'Mihir','background':'Computer Eng','age':16},
+        {'name':'yashvi','background':'Computer Eng','age':23}
     ]
     
     return render (request,"canvote.html",context={'peoples':peoples})
