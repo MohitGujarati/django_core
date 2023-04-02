@@ -18,8 +18,16 @@ from django.urls import path
 from home.views import *
 
 urlpatterns = [
-    path('canhevote',CanVote,name="canhevote"),
+    
+    path('about/',about_page,name="about_page"),
+    
+    path('contacts/',contacts_page,name="contacts_page"),
+    
+    path('canhevote/',CanVote,name="canhevote"),
+    
     path('',home,name="home"),
+    
     path('html_page',html_page,name="html_page"),
+    
     path('admin/', admin.site.urls),
 ]

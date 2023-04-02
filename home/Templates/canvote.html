@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Can You Vote</title>
+
+
+{% block start %}
     
     <style>
       table, th, td {
@@ -16,9 +12,17 @@
     </style>
 </head>
 <body>
+
+  <a href="/contacts/">
+    contacts
+</a>
+<a href="/about/">
+    about
+</a>
     
   {{peoples}}
 
+  
 
   <table>
     <tr>
@@ -27,7 +31,9 @@
       <th>Background</th>
       <th>Age</th>
       <th>can he vote ?</th>
+
     </tr>
+    
     
   
   {% for i in peoples %}
@@ -48,14 +54,22 @@
       
     </tr>
     {% endfor %}
-
-    <script>
-      console.log("hello js/Django")
-    </script>
-  
-   
   </table>
+  <p>{{text}}</p>
+  <p>
+    truncatechars:80::---
+    {{text|truncatechars:80}}
+  </p>
+  {% if "Cucumber" in vegetables%}
+  "Present"
+  {%elif "Tomatoes" in vegetables%}
+  Tomatoes Available
+  {% else %}
+  "Not Available but we have"
+  {% endif %}
 
-    
-</body>
-</html>
+  <script>
+    console.log("hello js/Django")
+  </script>
+
+  {% endblock  %}
