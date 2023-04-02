@@ -10,13 +10,13 @@ def home(request):
 
 
 def html_page(request):
-   return  render (request,"index.html")
+   return  render (request,"hello/index.html")
 
 def about_page(request):
-   return  render (request,"about.html")
+   return  render (request,"hello/about.html")
 
 def contacts_page(request):
-   return  render (request,"contacts.html")
+   return  render (request,"hello/contacts.html")
 
 def CanVote(request):
     
@@ -32,4 +32,4 @@ def CanVote(request):
     """
     vegetables = ['Carrots', 'Broccoli', 'Cauliflower', 'Spinach', 'Cabbage', 'Bell peppers', 'Tomatoes', 'Onions']
 
-    return render (request,"canvote.html",context={'peoples':peoples,'text':Text, 'vegetables':vegetables})
+    return render (request,"hello/canvote.html",context={'peoples':peoples,'text':Text, 'vegetables':vegetables})
